@@ -1,0 +1,85 @@
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    input {
+      width: 200px;
+      padding: 10px;
+      font-size: 28px;
+    }
+  
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      margin-top: 10px;
+  
+      button {
+        padding: 15px;
+        font-size: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        cursor: pointer;.calculator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+          
+            input {
+              width: 90%; 
+              padding: 10px;
+              font-size: 28px;
+            }
+          
+            .buttons {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              grid-gap: 10px;
+              margin-top: 10px;
+          
+              button {
+                padding: 15px;
+                font-size: 20px;
+                background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                cursor: pointer;
+          
+                &:hover {
+                  background-color: #ddd;
+                }
+              }
+            }
+          
+            .result {
+              margin-top: 10px;
+              font-size: 20px;
+            }
+          
+            @media (max-width: 768px) {
+              /* Estilos para pantallas más pequeñas (dispositivos móviles) */
+              input {
+                width: 100%; // Ancho completo en pantallas pequeñas
+              }
+          
+              .buttons {
+                grid-template-columns: repeat(3, 1fr); // Cambiar el diseño de los botones
+              }
+            }
+          }
+          
+  
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+  
+    .result {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+  }
+  
