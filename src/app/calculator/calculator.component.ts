@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Parser } from 'expr-eval';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-calculator',
@@ -13,16 +15,24 @@ export class CalculatorComponent implements OnInit {
   }
   inputValue: string = '';
   result: number | string = '';
+  parser = new Parser();
 
   appendToInput(value: string) {
     this.inputValue += value;
   }
 
+
   calculate() {
     try {
-      this.result = eval(this.inputValue);
-      this.inputValue = this.result.toString(); 
+      const expr = this.parser.parse(this.inputValue);
+      this.result = expr.evaluate();
+      this.inputValue = this.result.toString();
     } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Invalid expression'
+      });
       this.result = 'Error';
     }
   }
@@ -31,5 +41,4 @@ export class CalculatorComponent implements OnInit {
     this.inputValue = '';
     this.result = '';
   }
-
 }

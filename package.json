@@ -19,7 +19,12 @@
     "@angular/platform-browser": "^14.0.0-next.0",
     "@angular/platform-browser-dynamic": "^14.0.0-next.0",
     "@angular/router": "^14.0.0-next.0",
+    "bootstrap": "^5.3.1",
+    "bootstrap-sweetalert": "^1.0.1",
+    "expr-eval": "^2.0.2",
+    "ngx-bootstrap": "^0.0.1",
     "rxjs": "~7.5.0",
+    "sweetalert2": "^11.7.27",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
